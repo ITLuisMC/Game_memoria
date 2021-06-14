@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubriendo cartas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MemoryS</h1>
+    </header>
+    <div id="settings">
+        <select name="select">
+            <option value="5">Facil - 5min</option>
+            <option value="3">Medio - 3min</option>
+            <option value="1">Dificil - 1min</option>
+        </select>
+    </div>
+    <div id="controles">
+        <button id="reiniciar" class="desaparecido" name="reiniciar">Reiniciar</button>
+        <button id="start" name="start">Barajear</button>
+    </div>
+
+    <main>
+
+        <div class="controles">
+
+            <div id="panel" class="oculto">
+                <div id="marcador">
+                    <h4>Marcador</h4>
+                    <p id="aciertos">Aciertos 0</p>
+                    <p id="fallos">Fallos 0</p>
+                </div>
+                <div id="temporizador">
+                    <h4>Tiempo</h4>
+                    <div>
+                        <p><span id="minutos">00</span> : <span id="segundos">00</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mesa" class="mesa"></div>
+
+    </main>
+    <audio autoplay src=""></audio>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

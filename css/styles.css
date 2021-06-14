@@ -1,0 +1,143 @@
+:root {
+    --bg: #fafafa;
+    --font: "Archivo", sans-serif;
+    --font-display: "Archivo Narrow", sans-serif;
+    --hotpintk: #e94057;
+    --orange: #f27121;
+    --gradient: linear-gradient(35deg, var(--orange), var(--hotpintk));
+}
+
+body {
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: var(--font);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3c4a5;
+}
+
+body header {
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#panel {
+    background-color: #fafafa;
+    border-radius: 12px;
+    display: flex;
+}
+
+#marcador,#temporizador {
+    padding: 1rem;
+}
+
+
+.mesa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    max-width: 50rem;
+    margin: auto;
+}
+
+.tarjeta {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    background-image: var(--gradient);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.tarjeta__contenido {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: rotateY(-180deg);
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    padding-top: 0.4rem;
+}
+
+.tarjeta__contenido::selection {
+    background: transparent;
+}
+
+.tarjeta.descubierta {
+    transform: rotateY(-180deg);
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+}
+
+.oculto {
+    opacity: 0;
+}
+
+.desaparecido {
+    display: none;
+}
+
+.ocultar {
+    animation-duration: 1s;
+    animation-name: ocultando;
+    opacity: 0;
+}
+
+@keyframes ocultando {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+.mostrar {
+    animation-duration: 1s;
+    animation-name: ocultando;
+}
+
+@keyframes mostrando {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
